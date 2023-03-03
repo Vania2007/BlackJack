@@ -24,7 +24,6 @@ namespace CnsBlackJack
             Deck.Full();
             Deck.Shuffle();
             Deck.Deal(2);
-            Deck.Deal(2);
         }
         public int Points(Player player)
         {

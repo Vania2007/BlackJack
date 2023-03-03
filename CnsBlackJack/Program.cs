@@ -10,7 +10,8 @@ namespace CnsBlackJack
         {
             
             game.Start();
-            Console.WriteLine("Will you take one more card?\nWrite 'Yes' or 'No'");
+            Console.WriteLine($"{game.Player.Hand[0]}, {game.Player.Hand[1]}"); //показати карти, щщо в руці гравця до моменту, брати ще чи ні
+            Console.WriteLine("Will you take one more card?\nWrite 'Yes' or 'No'"); 
             string answer = Console.ReadLine();
             if (answer == "Yes")
             {
