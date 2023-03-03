@@ -10,8 +10,8 @@ namespace CnsBlackJack
         public Player Dealer { get; set; }
         public Player Player { get; set; }
         public Player Current { get; set; }
+        public Player Winner { get; set; }
         public CardSet Deck { get; set; }
-        public List<Player> Players { get; set; }
         public void Hit()
         {
             //Додати поточному гравцю ще карту
@@ -35,7 +35,7 @@ namespace CnsBlackJack
             int handValue = 0;
             int aceCount = 0;
 
-            foreach (Card card in Player.Hand)
+            foreach (Card card in player.Hand)
             {
                 if (card.Rank == CardRank.Ace)
                 {
@@ -98,6 +98,7 @@ namespace CnsBlackJack
                 Player.Status = WinnerOrLose.Lose;
                 winner = Dealer;
             }
+            Winner = winner;
             return winner;
         }
         public void DealerAction()

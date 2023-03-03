@@ -19,6 +19,7 @@ namespace CnsBlackJack
             game.Pass();
             game.DealerAction();
             game.Pass();
+            Console.WriteLine($"{game.GetWinner()}, {game.Winner}: {game.Points(game.Winner)}");
         }
         static void Main(string[] args)
         {
